@@ -5,6 +5,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private Transform followTarget;
 
     [SerializeField] private Vector3 followOffset;
+    [SerializeField] private float followDamping;
 
     private Rigidbody _ballRB;
 
@@ -15,6 +16,8 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = new Vector3(followTarget.position.x + followOffset.x, followOffset.y, followTarget.transform.position.z + followOffset.z);
+        transform.LookAt(followTarget);
+        var followPos = new Vector3(followTarget.position.x + followOffset.x, followOffset.y, followTarget.transform.position.z + followOffset.z);
+        transform.position = Vector3.Lerp(transform.position, followPos, followDamping * Time.deltaTime);
     }
 }
