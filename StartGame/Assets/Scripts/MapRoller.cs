@@ -24,7 +24,7 @@ public class MapRoller : MonoBehaviour
         _rollInput = -input;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         transform.RotateAround(ball.transform.position, Vector3.right, _rollInput.y * rotationSpeed * Time.deltaTime);
         transform.RotateAround(ball.transform.position, Vector3.forward, _rollInput.x * rotationSpeed * Time.deltaTime);

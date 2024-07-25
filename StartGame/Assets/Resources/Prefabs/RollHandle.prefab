@@ -270,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 723219316860703116}
   rotationSpeed: 90
-  returnSpeed: 5
+  returnSpeed: 3
 --- !u!114 &6621301700713324982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +307,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!1 &4174544735327483919
@@ -1316,6 +1316,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796140951623527513, guid: e5da445668ae99b4dae45d30ac21583a,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6253024225629571850, guid: e5da445668ae99b4dae45d30ac21583a,
         type: 3}
