@@ -7,6 +7,14 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject mainMenuUI;
     [SerializeField] GameObject creditsUI;
     [SerializeField] GameObject memeUI;
+    [SerializeField] GameObject dialogBox;
+
+    private int _counter;
+
+    private void Awake()
+    {
+        _counter = 0;
+    }
 
     public void StartGame()
     {
@@ -29,5 +37,25 @@ public class MainMenu : MonoBehaviour
     {
         creditsUI.SetActive(false);
         mainMenuUI.SetActive(true);
+    }
+
+    public void ClickCounter()
+    {
+        _counter += 1;
+        Debug.Log("Counter:" + _counter);
+
+        if (_counter == 10)
+        {
+            dialogBox.SetActive(true);
+            
+        }
+        else if (_counter == 11)
+        {
+            dialogBox.SetActive(false);
+        }
+        else if (_counter == 20)
+        {
+            LoadCreditsMenuUI();
+        }
     }
 }
