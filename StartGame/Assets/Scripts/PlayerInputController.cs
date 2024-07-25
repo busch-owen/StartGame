@@ -15,6 +15,21 @@ public class PlayerInputController : MonoBehaviour
 
         _input.BoardInput.MouseMovement.performed += i => _mapRoller.GetInput(i.ReadValue<Vector2>());
         
+        EnableInput();
+    }
+
+    public void DisableInput()
+    {
+        _input.Disable();
+    }
+
+    public void EnableInput()
+    {
         _input.Enable();
+    }
+    
+    private void OnDestroy()
+    {
+        DisableInput();
     }
 }

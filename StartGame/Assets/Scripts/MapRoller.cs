@@ -21,7 +21,6 @@ public class MapRoller : MonoBehaviour
 
     public void GetInput(Vector2 input)
     {
-        Debug.Log(input);
         _rollInput = -input;
     }
 
