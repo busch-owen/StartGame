@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2038169164}
+      - m_Target: {fileID: 1372988438}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: LoadMemeMenuUI
         m_Mode: 1
@@ -1037,7 +1037,6 @@ GameObject:
   - component: {fileID: 797559783}
   - component: {fileID: 797559782}
   - component: {fileID: 797559781}
-  - component: {fileID: 797559780}
   m_Layer: 5
   m_Name: MemeMenu
   m_TagString: Untagged
@@ -1045,23 +1044,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &797559780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797559779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93349e114fd090e42ae3eac50ed2ae56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: SampleScene
-  mainMenuUI: {fileID: 797559779}
-  creditsUI: {fileID: 0}
-  memeUI: {fileID: 0}
-  dialogBox: {fileID: 0}
 --- !u!114 &797559781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,19 +1114,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797559779}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -116.960556}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 589352344}
   - {fileID: 612721335}
   - {fileID: 2072900476}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1372988439}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -680.4437, y: -765.2941}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1013647420
@@ -1230,7 +1212,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2038169164}
+      - m_Target: {fileID: 1372988438}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: ClickCounter
         m_Mode: 1
@@ -1566,7 +1548,6 @@ GameObject:
   - component: {fileID: 1226652883}
   - component: {fileID: 1226652882}
   - component: {fileID: 1226652881}
-  - component: {fileID: 1226652880}
   - component: {fileID: 1226652885}
   m_Layer: 5
   m_Name: CreditsMenu
@@ -1575,23 +1556,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1226652880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1226652879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93349e114fd090e42ae3eac50ed2ae56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: SampleScene
-  mainMenuUI: {fileID: 1226652879}
-  creditsUI: {fileID: 0}
-  memeUI: {fileID: 0}
-  dialogBox: {fileID: 0}
 --- !u!114 &1226652881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1662,8 +1626,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226652879}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -116.960556}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1671,11 +1635,11 @@ RectTransform:
   - {fileID: 1198635786}
   - {fileID: 1904934338}
   - {fileID: 2120946067}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1372988439}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -680.4437, y: -765.2941}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1226652885
@@ -1690,9 +1654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b418c1474ab68d645bd88a9cd124fa6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1198635787}
-  startPosition: {fileID: 0}
-  endPosition: {fileID: 0}
 --- !u!1 &1240544620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2029,6 +1990,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338595341}
   m_CullTransparentMesh: 1
+--- !u!1 &1372988437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1372988439}
+  - component: {fileID: 1372988438}
+  m_Layer: 0
+  m_Name: MainMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1372988438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372988437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93349e114fd090e42ae3eac50ed2ae56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: OwenTestScene
+  mainMenuUI: {fileID: 2038169159}
+  creditsUI: {fileID: 1226652879}
+  memeUI: {fileID: 797559779}
+  dialogBox: {fileID: 669858300}
+--- !u!4 &1372988439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372988437}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 680.4437, y: 765.2941, z: 116.960556}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2038169163}
+  - {fileID: 797559784}
+  - {fileID: 1226652884}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1629180954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2471,7 +2484,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1226652880}
+      - m_Target: {fileID: 1372988438}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
@@ -2533,7 +2546,6 @@ GameObject:
   - component: {fileID: 2038169162}
   - component: {fileID: 2038169161}
   - component: {fileID: 2038169160}
-  - component: {fileID: 2038169164}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -2621,30 +2633,13 @@ RectTransform:
   - {fileID: 1338595342}
   - {fileID: 15756941}
   - {fileID: 669858301}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1372988439}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2038169164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038169159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93349e114fd090e42ae3eac50ed2ae56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: SampleScene
-  mainMenuUI: {fileID: 2038169159}
-  creditsUI: {fileID: 1226652879}
-  memeUI: {fileID: 797559779}
-  dialogBox: {fileID: 669858300}
 --- !u!1 &2072900475
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,7 +2723,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 797559780}
+      - m_Target: {fileID: 1372988438}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
@@ -2918,7 +2913,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 330585546}
   - {fileID: 410087041}
-  - {fileID: 2038169163}
-  - {fileID: 797559784}
-  - {fileID: 1226652884}
   - {fileID: 1254696368}
+  - {fileID: 1372988439}
