@@ -23,6 +23,5 @@ public class Interactableobject : MonoBehaviour
         {
             _player.RB.velocity = new Vector3(_speedx, _speedy, _speedz);
         }
-
     }
 }

@@ -17,6 +17,8 @@ public class GoalPost : MonoBehaviour
 
     private CameraFollow _cameraFollow;
 
+    [SerializeField] private ParticleSystem confettiEffect;
+
     private void Awake()
     {
         _levelStatusHandler = FindObjectOfType<LevelStatusHandler>();
@@ -30,6 +32,7 @@ public class GoalPost : MonoBehaviour
         _thisCollider.enabled = false;
         _cameraFollow.RemoveFollow();
         Physics.gravity = levelClearGravity;
+        confettiEffect.Play();
         StartCoroutine(_levelStatusHandler.EndLevelSequence());
     }
 }
