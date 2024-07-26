@@ -26,13 +26,13 @@ public class MapRoller : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.RotateAround(ball.transform.position, Vector3.right, _rollInput.y * rotationSpeed * Time.fixedDeltaTime);
-        transform.RotateAround(ball.transform.position, Vector3.forward, _rollInput.x * rotationSpeed * Time.fixedDeltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), returnSpeed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, Vector3.zero, returnSpeed * Time.deltaTime);
     }
 
     private void FixedUpdate()
     {
-        _rb.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), returnSpeed * Time.fixedDeltaTime);
-        _rb.position = Vector3.Lerp(transform.position, Vector3.zero, returnSpeed * Time.fixedDeltaTime);
+        transform.RotateAround(ball.transform.position, Vector3.right, _rollInput.y * rotationSpeed * Time.fixedDeltaTime);
+        transform.RotateAround(ball.transform.position, Vector3.forward, _rollInput.x * rotationSpeed * Time.fixedDeltaTime);
     }
 }

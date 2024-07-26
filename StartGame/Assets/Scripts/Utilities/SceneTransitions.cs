@@ -42,11 +42,11 @@ public class SceneTransitions : MonoBehaviour
         }
 
         var nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-        if (nextScene >= SceneManager.sceneCountInBuildSettings - 1)
+        if (nextScene > SceneManager.sceneCountInBuildSettings - 1)
         {
             Debug.LogWarning("There are no more scenes in the build index after current scene");
             StopAllCoroutines();
-            yield return null;
+            yield break;
         }
         SceneManager.LoadScene(nextScene);
         StopAllCoroutines();
