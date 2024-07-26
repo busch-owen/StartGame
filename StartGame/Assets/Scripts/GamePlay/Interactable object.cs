@@ -17,17 +17,11 @@ public class Interactableobject : MonoBehaviour
         _player = FindObjectOfType<Player>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            _player._rb.velocity = new Vector3(_speedx, _speedy, _speedz);
+            _player.RB.velocity = new Vector3(_speedx, _speedy, _speedz);
         }
 
     }
