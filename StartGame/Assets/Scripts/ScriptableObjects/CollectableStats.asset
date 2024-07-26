@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf6127edaf418240a8509c14e4eff1c, type: 3}
   m_Name: CollectableStats
   m_EditorClassIdentifier: 
-  <PointValue>k__BackingField: 0
+  <PointValue>k__BackingField: 1
