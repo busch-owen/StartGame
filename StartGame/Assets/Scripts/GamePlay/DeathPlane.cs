@@ -4,11 +4,16 @@ using UnityEngine.SceneManagement;
 
 public class DeathPlane : MonoBehaviour
 {
-    [SerializeField] private string sceneName;
-    
+    private SceneTransitions _sceneTransitions;
+
+    private void Awake()
+    {
+        _sceneTransitions = FindObjectOfType<SceneTransitions>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        SceneManager.LoadScene(SceneManager.GetSceneByName(sceneName).buildIndex);
+        StartCoroutine(_sceneTransitions.FadeIntoSameScene());
     }
 }

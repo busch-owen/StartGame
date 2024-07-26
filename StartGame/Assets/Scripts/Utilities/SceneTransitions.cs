@@ -9,8 +9,6 @@ public class SceneTransitions : MonoBehaviour
     private CanvasGroup _transitionGroup;
     private WaitForFixedUpdate _waitForFixed;
 
-    [SerializeField] private string nextSceneName;
-
     [SerializeField] private float fadeSpeed;
     
     void Start()
@@ -50,7 +48,20 @@ public class SceneTransitions : MonoBehaviour
             StopAllCoroutines();
             yield return null;
         }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(nextScene);
+        StopAllCoroutines();
+    }
+    public IEnumerator FadeIntoSameScene()
+    {
+        _transitionGroup.alpha = 0f;
+        while (_transitionGroup.alpha < 1f)
+        {
+            _transitionGroup.alpha = Mathf.Lerp(_transitionGroup.alpha, 1.1f, fadeSpeed * Time.fixedDeltaTime);
+            yield return _waitForFixed;
+        }
+
+        var nextScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(nextScene);
         StopAllCoroutines();
     }
 }

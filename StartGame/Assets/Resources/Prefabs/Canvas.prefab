@@ -153,9 +153,9 @@ MonoBehaviour:
   - 2
   - 1
   - GO!
-  levelClearMessage: GOAL!!
+  levelClearMessage: GOAL!
   timeBetweenDetails: 1
-  levelClearDuration: 3
+  levelClearDuration: 2
   targetFontSize: 300
   fontSizeLerpSpeed: 3
 --- !u!1 &4715996884309789361
@@ -362,5 +362,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd47240a6a58884e96334220b98d674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: AydenTestScene
-  fadeSpeed: 2
+  fadeSpeed: 5
