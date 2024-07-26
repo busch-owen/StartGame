@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private CounterHandler _counterHandler;
+    private LevelStatusHandler _levelStatusHandler;
+
+    [SerializeField] private Vector3 defaultGravity;
 
     private void Awake()
     {
-        _counterHandler = FindObjectOfType<CounterHandler>();
+        _levelStatusHandler = FindObjectOfType<LevelStatusHandler>();
+        Physics.gravity = defaultGravity;
     }
 
     private void Start()
@@ -19,6 +22,6 @@ public class GameManager : MonoBehaviour
 
     private void StartSequence()
     {
-        StartCoroutine(_counterHandler.CountdownSequence());
+        StartCoroutine(_levelStatusHandler.CountdownSequence());
     }
 }

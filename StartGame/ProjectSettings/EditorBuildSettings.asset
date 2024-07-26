@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OwenTestScene.unity
     guid: 9ef2ef7d2bf5f1a498bf8b1e071bd916
+  - enabled: 1
+    path: Assets/Scenes/AydenTestScene.unity
+    guid: 7eab9dc1ff00a2b47818674b0f16c4a8
   m_configObjects: {}

@@ -1,18 +1,35 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GoalPost : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private LevelStatusHandler _levelStatusHandler;
+
+    private BoxCollider _thisCollider;
+    
+    [SerializeField] private string levelClearMessage;
+
+    private TMP_Text _levelStatusText;
+
+    [SerializeField] private Vector3 levelClearGravity;
+
+    private CameraFollow _cameraFollow;
+
+    private void Awake()
     {
-        
+        _levelStatusHandler = FindObjectOfType<LevelStatusHandler>();
+        _cameraFollow = FindObjectOfType<CameraFollow>();
+        _thisCollider = GetComponent<BoxCollider>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (!other.CompareTag("Player")) return;
+        _thisCollider.enabled = false;
+        _cameraFollow.RemoveFollow();
+        Physics.gravity = levelClearGravity;
+        StartCoroutine(_levelStatusHandler.EndLevelSequence());
     }
 }

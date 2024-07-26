@@ -27,6 +27,11 @@ public class CameraFollow : MonoBehaviour
         followDamping = speed;
     }
 
+    public void RemoveFollow()
+    {
+        followDamping = 0f;
+    }
+
     public void ResetFollowSpeed()
     {
         followDamping = defaultSpeed;

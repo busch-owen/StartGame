@@ -3,27 +3,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
 
-public class CounterHandler : MonoBehaviour
+public class LevelStatusHandler : MonoBehaviour
 {
     [SerializeField] private TMP_Text counterText;
 
     [SerializeField] private string[] counterDetails;
+    [SerializeField] private string levelClearMessage;
 
     [SerializeField] private float timeBetweenDetails;
+    [SerializeField] private float levelClearDuration;
     [SerializeField] private float targetFontSize;
     [SerializeField] private float fontSizeLerpSpeed;
 
     private WaitForSeconds _waitForDetails;
+    private WaitForSeconds _waitForClearMessage;
 
     private PlayerInputController _inputController;
 
     private CameraFollow _cameraFollow;
+    
+    private SceneTransitions _sceneTransitions;
 
     private void Awake()
     {
+        _sceneTransitions = FindObjectOfType<SceneTransitions>();
         _waitForDetails = new WaitForSeconds(timeBetweenDetails);
+        _waitForClearMessage = new WaitForSeconds(levelClearDuration);
         _inputController = FindObjectOfType<PlayerInputController>();
         _cameraFollow = FindObjectOfType<CameraFollow>();
     }
@@ -35,7 +41,6 @@ public class CounterHandler : MonoBehaviour
         foreach (var detail in counterDetails)
         {
             counterText.text = detail;
-            Debug.Log("Counting");
             StartCoroutine(LerpFontSize());
             yield return _waitForDetails;
 
@@ -45,6 +50,16 @@ public class CounterHandler : MonoBehaviour
         _inputController.EnableInput();
         StopAllCoroutines();
         _cameraFollow.ResetFollowSpeed();
+    }
+
+    public IEnumerator EndLevelSequence()
+    {
+        _inputController.DisableInput();
+        counterText.text = levelClearMessage;
+        StartCoroutine(LerpFontSize());
+        yield return _waitForClearMessage;
+
+        StartCoroutine(_sceneTransitions.FadeIntoNewScene());
     }
 
     private IEnumerator LerpFontSize()
