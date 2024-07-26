@@ -2947,9 +2947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41391ae0d9d7bf438d78ad79ab459bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 8963797974623521839}
-  rotationSpeed: 50
-  returnSpeed: 0.5
+  rollerStats: {fileID: 11400000, guid: 12d5a0a09cb7f244abf1363bef2e6cad, type: 2}
 --- !u!54 &8905007341993254585
 Rigidbody:
   m_ObjectHideFlags: 0
