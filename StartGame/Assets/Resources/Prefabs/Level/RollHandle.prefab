@@ -2153,8 +2153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 0}
-  rotationSpeed: 50
-  returnSpeed: 0.5
+  rotationSpeed: 20
+  returnSpeed: 2
 --- !u!114 &6621301700713324982
 MonoBehaviour:
   m_ObjectHideFlags: 0
