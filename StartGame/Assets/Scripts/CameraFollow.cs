@@ -15,11 +15,11 @@ public class CameraFollow : MonoBehaviour
         _ballRB = followTarget?.GetComponent<Rigidbody>();
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         transform.LookAt(followTarget);
-        var followPos = new Vector3(followTarget.position.x + followOffset.x, followOffset.y, followTarget.transform.position.z + followOffset.z);
-        transform.position = Vector3.Lerp(transform.position, followPos, followDamping * Time.deltaTime);
+        var followPos = new Vector3(followTarget.position.x + followOffset.x, followTarget.position.y + followOffset.y, followTarget.transform.position.z + followOffset.z);
+        transform.position = Vector3.Lerp(transform.position, followPos, followDamping * Time.fixedDeltaTime);
     }
 
     public void ChangeFollowSpeed(float speed)
