@@ -17,12 +17,17 @@ public class CerealCounter : MonoBehaviour
 
     private void Start()
     {
-        _scoreHandler = FindObjectOfType<ScoreHandler>();
-        _scoreHandler.AssignCounter(this);
-        _scoreHandler.RefreshScore();
+        Invoke(nameof(FindScoreHandler), 0.01f);
         Invoke(nameof(StartHide), displayTime);
     }
 
+    private void FindScoreHandler()
+    {
+        _scoreHandler = FindObjectOfType<ScoreHandler>();
+        _scoreHandler.AssignCounter(this);
+        _scoreHandler.RefreshScore();
+    }
+    
     public void UpdateCounterText(int value)
     {
         counterText.text = value.ToString();
