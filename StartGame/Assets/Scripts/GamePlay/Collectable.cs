@@ -17,6 +17,7 @@ public class Collectable : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         _scoreHandler.AddToScore(_stats.PointValue);
+        
         Destroy(gameObject);
     }
 }
