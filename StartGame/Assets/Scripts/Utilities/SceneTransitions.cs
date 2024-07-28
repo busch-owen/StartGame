@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class SceneTransitions : MonoBehaviour
@@ -11,12 +12,12 @@ public class SceneTransitions : MonoBehaviour
 
     [SerializeField] private float fadeSpeed;
     
-    void Start()
+    
+    private void Start()
     {
         _levelStatus = FindObjectOfType<LevelStatusHandler>();
         _transitionGroup = GetComponent<CanvasGroup>();
         _waitForFixed = new WaitForFixedUpdate();
-
         
         StartCoroutine(FadeOutTransition());
     }
