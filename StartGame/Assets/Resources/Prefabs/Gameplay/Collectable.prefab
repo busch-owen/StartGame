@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 877277254373039662}
+  - component: {fileID: 3618229347025657402}
   m_Layer: 0
   m_Name: cerealBowl
   m_TagString: Untagged
@@ -33,6 +34,27 @@ Transform:
   - {fileID: 6009640089127944278}
   m_Father: {fileID: 1512868492871548732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3618229347025657402
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533509083641087124}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bfb35ba931de9d74d837f87822851671, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1607706541816332460
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +168,7 @@ Transform:
   m_GameObject: {fileID: 8137972014634564122}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.17000008, y: 1.1090002, z: 7.34}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -187,6 +209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stats: {fileID: 11400000, guid: 97e759d62bf3b6743b8a32e526b033f4, type: 2}
+  collectEffect: {fileID: 6224627446285094255, guid: a0ce6a816acc9e040b16eabda25a0702,
+    type: 3}
 --- !u!1 &8798354379208011725
 GameObject:
   m_ObjectHideFlags: 0

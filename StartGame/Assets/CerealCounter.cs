@@ -36,6 +36,7 @@ public class CerealCounter : MonoBehaviour
 
     private IEnumerator LerpIntoView()
     {
+        CancelInvoke(nameof(StartHide));
         while (handle.position.y > shownPos.position.y + 0.05f)
         {
             handle.position = Vector3.Lerp(handle.position, shownPos.position, showSpeed * Time.fixedDeltaTime);
