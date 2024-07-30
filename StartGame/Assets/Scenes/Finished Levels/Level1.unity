@@ -917,11 +917,6 @@ PrefabInstance:
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 8963797974623521839}
-    - target: {fileID: 7225986856239860510, guid: fcef613d5183ba84f9e3ad2bd39dcc69,
-        type: 3}
-      propertyPath: followOffset.z
-      value: -4
-      objectReference: {fileID: 0}
     - target: {fileID: 7537939040854689353, guid: fcef613d5183ba84f9e3ad2bd39dcc69,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -151,6 +151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followTarget: {fileID: 0}
-  followOffset: {x: -4, y: 2, z: -4}
+  followOffset: {x: 0, y: 2, z: -4}
   followDamping: 10
   defaultSpeed: 10
