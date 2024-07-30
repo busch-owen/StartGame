@@ -152,8 +152,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 300
-  m_fontSizeBase: 300
+  m_fontSize: 200
+  m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -211,11 +211,11 @@ MonoBehaviour:
   - 3
   - 2
   - 1
-  - GO!
+  - ROCK AND ROLL!
   levelClearMessage: GOAL!
   timeBetweenDetails: 1
   levelClearDuration: 2
-  targetFontSize: 300
+  targetFontSize: 200
   fontSizeLerpSpeed: 3
 --- !u!1 &747259202808435454
 GameObject:

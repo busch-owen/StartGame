@@ -7,15 +7,13 @@ public class MapRoller : MonoBehaviour
     private Transform ball;
 
     [SerializeField] private MapRollerSO rollerStats;
-
-    private Rigidbody _rb;
+    
 
     private void Awake()
     {
         ball = FindObjectOfType<Player>().transform;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        _rb = GetComponent<Rigidbody>();
     }
 
     public void GetInput(Vector2 input)
