@@ -25,6 +25,8 @@ public class LevelStatusHandler : MonoBehaviour
     
     private SceneTransitions _sceneTransitions;
 
+    private Timer _timer;
+
     private void Awake()
     {
         _sceneTransitions = FindObjectOfType<SceneTransitions>();
@@ -32,6 +34,7 @@ public class LevelStatusHandler : MonoBehaviour
         _waitForClearMessage = new WaitForSeconds(levelClearDuration);
         _inputController = FindObjectOfType<PlayerInputController>();
         _cameraFollow = FindObjectOfType<CameraFollow>();
+        _timer = FindObjectOfType<Timer>();
     }
 
     public IEnumerator CountdownSequence()
@@ -50,10 +53,12 @@ public class LevelStatusHandler : MonoBehaviour
         _inputController.EnableInput();
         StopAllCoroutines();
         _cameraFollow.ResetFollowSpeed();
+        _timer.StartTimer();
     }
 
     public IEnumerator EndLevelSequence()
     {
+        _timer.StopAndPostTimer();
         _inputController.DisableInput();
         counterText.text = levelClearMessage;
         StartCoroutine(LerpFontSize());
