@@ -26,8 +26,8 @@ public class MapRoller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.RotateAround(ball.transform.localPosition, Vector3.right, _rollInput.y * rollerStats.RotationSpeed * Time.fixedDeltaTime);
-        transform.RotateAround(ball.transform.localPosition, Vector3.forward, _rollInput.x * rollerStats.RotationSpeed * Time.fixedDeltaTime);
+        transform.RotateAround(ball.transform.position, Vector3.right, _rollInput.y * rollerStats.RotationSpeed);
+        transform.RotateAround(ball.transform.position, Vector3.forward, _rollInput.x * rollerStats.RotationSpeed);
         //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0 , 0), rollerStats.ReturnSpeed * Time.fixedDeltaTime);
         //transform.position = Vector3.Lerp(transform.position, Vector3.zero, rollerStats.ReturnSpeed * Time.fixedDeltaTime);
     }

@@ -14,6 +14,8 @@ public class MainMenu : MonoBehaviour
     private void Awake()
     {
         _counter = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void StartGame()

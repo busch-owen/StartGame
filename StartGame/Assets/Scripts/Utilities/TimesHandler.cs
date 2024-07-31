@@ -18,5 +18,6 @@ public class TimesHandler : Singleton<TimesHandler>
         if (!_leaderboard) _leaderboard = FindObjectOfType<Leaderboard>();
         Debug.Log(_timeList.Sum());
         _leaderboard.PostToLeaderboard(_timeList.Sum());
+        _timeList.Clear();
     }
 }
