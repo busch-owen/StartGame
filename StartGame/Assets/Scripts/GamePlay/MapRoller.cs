@@ -25,9 +25,9 @@ public class MapRoller : MonoBehaviour
         Debug.Log(_rollInput);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        transform.RotateAround(ball.transform.position, Vector3.right, _rollInput.y * rollerStats.RotationSpeed * Time.deltaTime);
-        transform.RotateAround(ball.transform.position, Vector3.forward, _rollInput.x * rollerStats.RotationSpeed * Time.deltaTime);
+        transform.RotateAround(ball.transform.position, Vector3.right, _rollInput.y * rollerStats.RotationSpeed * Time.fixedDeltaTime);
+        transform.RotateAround(ball.transform.position, Vector3.forward, _rollInput.x * rollerStats.RotationSpeed * Time.fixedDeltaTime);
     }
 }
