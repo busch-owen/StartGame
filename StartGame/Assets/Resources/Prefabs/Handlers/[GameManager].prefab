@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultGravity: {x: 0, y: -25, z: 0}
-  targetFrameRate: 60
+  targetFrameRate: -1
   vSyncOn: 1

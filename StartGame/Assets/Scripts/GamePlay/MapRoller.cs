@@ -21,12 +21,12 @@ public class MapRoller : MonoBehaviour
 
     public void GetInput(Vector2 input)
     {
-        _rollInput = -input;
+        _rollInput = -input.normalized;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        transform.RotateAround(ball.transform.position, Vector3.right, _rollInput.y * rollerStats.RotationSpeed * Time.fixedDeltaTime);
-        transform.RotateAround(ball.transform.position, Vector3.forward, _rollInput.x * rollerStats.RotationSpeed * Time.fixedDeltaTime);
+        transform.RotateAround(ball.transform.position, Vector3.right, _rollInput.y * rollerStats.RotationSpeed * Time.deltaTime);
+        transform.RotateAround(ball.transform.position, Vector3.forward, _rollInput.x * rollerStats.RotationSpeed * Time.deltaTime);
     }
 }
