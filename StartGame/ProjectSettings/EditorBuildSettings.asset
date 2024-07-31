@@ -15,11 +15,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Finished Levels/Level2.unity
     guid: 74c0ef7c0b7a164419ed9bc2d792ee1a
   - enabled: 1
+    path: Assets/Scenes/Finished Levels/GaranLevel1.unity
+    guid: 929715f418dff6948bb30ca13be6b2ad
+  - enabled: 1
     path: Assets/Scenes/Finished Levels/Level3.unity
     guid: 3a305c9fea9450649a7ef3b35fa7ed9d
   - enabled: 1
     path: Assets/Scenes/Finished Levels/DarkLevel.unity
     guid: bb1b9cde16856e04da7358e38c9c3c1c
+  - enabled: 1
+    path: Assets/Scenes/Finished Levels/GaranLevel2.unity
+    guid: bb7764a594058104889245ba2df79944
+  - enabled: 1
+    path: Assets/Scenes/Finished Levels/GaranLevel3.unity
+    guid: a4fc0db3b59e3a2419c9c4794986c306
   - enabled: 1
     path: Assets/Scenes/Finished Levels/LargeRailLevel.unity
     guid: e67b9fb220d780d4f8a7823aed8c47e1
