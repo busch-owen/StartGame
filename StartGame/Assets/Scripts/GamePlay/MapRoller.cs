@@ -4,6 +4,8 @@ public class MapRoller : MonoBehaviour
 {
     private Vector2 _rollInput;
 
+    private Vector3 _startPos;
+
     private Transform ball;
 
     [SerializeField] private MapRollerSO rollerStats;
@@ -11,6 +13,7 @@ public class MapRoller : MonoBehaviour
 
     private void Awake()
     {
+        _startPos = transform.position;
         ball = FindObjectOfType<Player>().transform;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -21,15 +24,11 @@ public class MapRoller : MonoBehaviour
         _rollInput = -input;
     }
 
-    private void LateUpdate()
-    {
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), rollerStats.ReturnSpeed * Time.deltaTime);
-        transform.position = Vector3.Lerp(transform.position, Vector3.zero, rollerStats.ReturnSpeed * Time.deltaTime);
-    }
-
     private void FixedUpdate()
     {
-        transform.RotateAround(ball.transform.position, Vector3.right, _rollInput.y * rollerStats.RotationSpeed * Time.fixedDeltaTime);
-        transform.RotateAround(ball.transform.position, Vector3.forward, _rollInput.x * rollerStats.RotationSpeed * Time.fixedDeltaTime);
+        transform.RotateAround(ball.transform.localPosition, Vector3.right, _rollInput.y * rollerStats.RotationSpeed * Time.fixedDeltaTime);
+        transform.RotateAround(ball.transform.localPosition, Vector3.forward, _rollInput.x * rollerStats.RotationSpeed * Time.fixedDeltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0 , 0), rollerStats.ReturnSpeed * Time.fixedDeltaTime);
+        transform.position = Vector3.Lerp(transform.position, Vector3.zero, rollerStats.ReturnSpeed * Time.fixedDeltaTime);
     }
 }

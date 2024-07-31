@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RollerStats
   m_EditorClassIdentifier: 
   <RotationSpeed>k__BackingField: 75
-  <ReturnSpeed>k__BackingField: 0.5
+  <ReturnSpeed>k__BackingField: 1
