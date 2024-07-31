@@ -21,7 +21,7 @@ public class MapRoller : MonoBehaviour
 
     public void GetInput(Vector2 input)
     {
-        _rollInput = -input.normalized;
+        _rollInput = -input;
     }
 
     private void FixedUpdate()
