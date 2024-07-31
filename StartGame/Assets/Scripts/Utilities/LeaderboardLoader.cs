@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
 using Unity.Services.Leaderboards;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class LeaderboardLoader : MonoBehaviour
@@ -12,12 +13,12 @@ public class LeaderboardLoader : MonoBehaviour
     [SerializeField] private TMP_Text leaderboardStatusText;
 
     [SerializeField] private GameObject leaderboardListing;
-    private Transform _listingHandle;
+    [SerializeField] private Transform listingHandle;
     
     private async void Start()
     {
         await UnityServices.InitializeAsync();
-        _listingHandle = GetComponentInChildren<VerticalLayoutGroup>().transform;
+        listingHandle = GetComponentInChildren<VerticalLayoutGroup>().transform;
     }
 
     public async void FillLeaderboard()
@@ -37,7 +38,7 @@ public class LeaderboardLoader : MonoBehaviour
 
                 string totalTimeString = string.Format($"{minutes:00}:{seconds:00}:{milliseconds:000}");
 
-                var newListing = Instantiate(leaderboardListing, _listingHandle).GetComponent<LeaderboardListing>();
+                var newListing = Instantiate(leaderboardListing, listingHandle).GetComponent<LeaderboardListing>();
                 newListing.NameText.text = leaderboardEntry.PlayerName;
                 newListing.TierText.text = "#" + (leaderboardEntry.Rank + 1);
                 newListing.TimeText.text = totalTimeString;

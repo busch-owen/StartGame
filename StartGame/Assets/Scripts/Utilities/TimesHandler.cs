@@ -15,10 +15,10 @@ public class TimesHandler : Singleton<TimesHandler>
         CalculateTotalTimes();
     }
 
-    private void CalculateTotalTimes()
+    public void CalculateTotalTimes()
     {
         if (!_leaderboard) _leaderboard = FindObjectOfType<Leaderboard>();
-        
+        Debug.Log(_timeList.Sum());
         _leaderboard.PostToLeaderboard(_timeList.Sum());
     }
 }

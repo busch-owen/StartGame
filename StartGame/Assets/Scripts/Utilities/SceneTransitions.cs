@@ -11,10 +11,14 @@ public class SceneTransitions : MonoBehaviour
     private WaitForFixedUpdate _waitForFixed;
 
     [SerializeField] private float fadeSpeed;
-    
+
+    private Leaderboard _leaderboard;
+
+    [SerializeField] private UnityEvent gameEnded;
     
     private void Start()
     {
+        gameEnded = new UnityEvent();
         _levelStatus = FindObjectOfType<LevelStatusHandler>();
         _transitionGroup = GetComponent<CanvasGroup>();
         _waitForFixed = new WaitForFixedUpdate();
@@ -46,6 +50,8 @@ public class SceneTransitions : MonoBehaviour
         if (nextScene > SceneManager.sceneCountInBuildSettings - 1)
         {
             Debug.LogWarning("There are no more scenes in the build index after current scene");
+            gameEnded.Invoke();
+            SceneManager.LoadScene("LeaderboardTest");
             StopAllCoroutines();
             yield break;
         }

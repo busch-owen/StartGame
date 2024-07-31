@@ -55,8 +55,8 @@ MonoBehaviour:
   handle: {fileID: 3511358731475531645}
   hiddenPos: {fileID: 4268255282187400913}
   shownPos: {fileID: 7380542780062661301}
-  showSpeed: 3
-  hideSpeed: 5
+  showSpeed: 10
+  hideSpeed: 15
   displayTime: 3
 --- !u!1 &699452040842294248
 GameObject:
