@@ -26,12 +26,18 @@ public class LoginService : MonoBehaviour
     {
         _loader = FindObjectOfType<LeaderboardLoader>();
         await UnityServices.InitializeAsync();
+        AuthenticationService.Instance.SignOut();
         //AuthenticationService.Instance.SignOut();
         if (!AuthenticationService.Instance.IsAuthorized)
         {
             signInScreen.SetActive(true);
         }
+        else
+        {
+            _loader.FillLeaderboard();
+        }
         errorDisplayText.text = "";
+        _loader.gameObject.SetActive(false);
     }
 
     public async void SignUpPlayer()
@@ -61,6 +67,7 @@ public class LoginService : MonoBehaviour
         errorDisplayText.text = "";
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
         _loader.FillLeaderboard();
+        signUpScreen.SetActive(false);
     }
 
     public async void LogInPlayer()
