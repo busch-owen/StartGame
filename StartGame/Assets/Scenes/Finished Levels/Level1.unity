@@ -1049,16 +1049,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8651529073709488354, guid: 45c57f475a2a29742880088171886e07,
         type: 3}
-      propertyPath: gameEnded.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651529073709488354, guid: 45c57f475a2a29742880088171886e07,
-        type: 3}
-      propertyPath: gameEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651529073709488354, guid: 45c57f475a2a29742880088171886e07,
-        type: 3}
       propertyPath: gameEnded.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -1074,18 +1064,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8651529073709488354, guid: 45c57f475a2a29742880088171886e07,
         type: 3}
-      propertyPath: gameEnded.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651529073709488354, guid: 45c57f475a2a29742880088171886e07,
-        type: 3}
       propertyPath: gameEnded.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651529073709488354, guid: 45c57f475a2a29742880088171886e07,
-        type: 3}
-      propertyPath: gameEnded.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CalculateTotalTimes
       objectReference: {fileID: 0}
     - target: {fileID: 8651529073709488354, guid: 45c57f475a2a29742880088171886e07,
         type: 3}
@@ -1094,18 +1074,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8651529073709488354, guid: 45c57f475a2a29742880088171886e07,
         type: 3}
-      propertyPath: gameEnded.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: TimesHandler, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651529073709488354, guid: 45c57f475a2a29742880088171886e07,
-        type: 3}
       propertyPath: gameEnded.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: TimesHandler, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8651529073709488354, guid: 45c57f475a2a29742880088171886e07,
-        type: 3}
-      propertyPath: gameEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8651529073709488354, guid: 45c57f475a2a29742880088171886e07,
         type: 3}

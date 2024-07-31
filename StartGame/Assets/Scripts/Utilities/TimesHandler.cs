@@ -11,8 +11,6 @@ public class TimesHandler : Singleton<TimesHandler>
     public void AddToTimeList(float timeToAdd)
     {
         _timeList.Add(timeToAdd);
-        
-        CalculateTotalTimes();
     }
 
     public void CalculateTotalTimes()
