@@ -2151,6 +2151,16 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4684964262823205089, guid: be13d1fee27bcba4cbb8ce8ec6deb878,
+        type: 3}
+      propertyPath: levelClearMessage
+      value: Clear!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684964262823205089, guid: be13d1fee27bcba4cbb8ce8ec6deb878,
+        type: 3}
+      propertyPath: levelClearGravity.y
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4688548134482345330, guid: be13d1fee27bcba4cbb8ce8ec6deb878,
         type: 3}
       propertyPath: m_StaticEditorFlags

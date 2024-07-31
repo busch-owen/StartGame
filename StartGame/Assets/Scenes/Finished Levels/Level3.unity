@@ -1413,12 +1413,12 @@ PrefabInstance:
     - target: {fileID: 7537939040854689353, guid: fcef613d5183ba84f9e3ad2bd39dcc69,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.96363664
       objectReference: {fileID: 0}
     - target: {fileID: 7537939040854689353, guid: fcef613d5183ba84f9e3ad2bd39dcc69,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.26721627
       objectReference: {fileID: 0}
     - target: {fileID: 7537939040854689353, guid: fcef613d5183ba84f9e3ad2bd39dcc69,
         type: 3}
@@ -1433,7 +1433,7 @@ PrefabInstance:
     - target: {fileID: 7537939040854689353, guid: fcef613d5183ba84f9e3ad2bd39dcc69,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 30.997
       objectReference: {fileID: 0}
     - target: {fileID: 7537939040854689353, guid: fcef613d5183ba84f9e3ad2bd39dcc69,
         type: 3}
@@ -1646,6 +1646,11 @@ PrefabInstance:
         type: 3}
       propertyPath: vSyncOn
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605911925582866606, guid: bc8cc46ec7c8fbb4c9c95943a1bb6959,
+        type: 3}
+      propertyPath: targetFrameRate
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5411634664053264016, guid: bc8cc46ec7c8fbb4c9c95943a1bb6959,
         type: 3}

@@ -3,8 +3,6 @@ using System;
 using UnityEngine;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
-using Unity.Services.Leaderboards;
-using UnityEditor.PackageManager;
 
 public class LoginService : MonoBehaviour
 {
@@ -22,6 +20,10 @@ public class LoginService : MonoBehaviour
         {
             signUpScreen.SetActive(true);
             SignUpPlayer();
+        }
+        else
+        {
+            _loader.FillLeaderboard();
         }
         _loader.gameObject.SetActive(false);
     }
