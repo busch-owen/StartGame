@@ -1869,11 +1869,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[GameManager]'
       objectReference: {fileID: 0}
-    - target: {fileID: 2605911925582866606, guid: bc8cc46ec7c8fbb4c9c95943a1bb6959,
-        type: 3}
-      propertyPath: vSyncOn
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5411634664053264016, guid: bc8cc46ec7c8fbb4c9c95943a1bb6959,
         type: 3}
       propertyPath: m_LocalPosition.x
