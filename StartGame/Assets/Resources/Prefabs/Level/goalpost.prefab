@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675372911be9efd42b08cd138926e4e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelClearMessage: 
+  levelClearMessage: Clear!
   levelClearGravity: {x: 0, y: 10, z: 3}
   confettiEffect: {fileID: 5318127787104432208}
   _winAudio: {fileID: 1722109512466480751}
