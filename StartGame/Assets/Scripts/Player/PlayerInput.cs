@@ -41,7 +41,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""MouseInput"",
                     ""id"": ""eb245d12-e245-4c9e-8997-b71a25a08d4d"",
-                    ""path"": ""2DVector(mode=1)"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
