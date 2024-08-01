@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        if(!_levelStatusHandler) return;
         StartSequence();
     }
 
