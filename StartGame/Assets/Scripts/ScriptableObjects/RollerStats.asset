@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8c991217bfba6f4da2d94e495b07bc8, type: 3}
   m_Name: RollerStats
   m_EditorClassIdentifier: 
-  <RotationSpeed>k__BackingField: 100
+  <RotationSpeed>k__BackingField: 25
   <ReturnSpeed>k__BackingField: 1
