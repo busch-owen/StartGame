@@ -30,6 +30,7 @@ public class GoalPost : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         _thisCollider.enabled = false;
+        other.GetComponent<Rigidbody>().velocity = Vector3.zero;
         _cameraFollow.RemoveFollow();
         Physics.gravity = levelClearGravity;
         confettiEffect.Play();

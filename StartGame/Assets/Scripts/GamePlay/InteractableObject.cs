@@ -1,11 +1,13 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class Interactableobject : MonoBehaviour
+public class InteractableObject : MonoBehaviour
 {
+    //Previously named "Interactable object.cs"
+    //Why would you hurt us like this, Ayden.
+    
+    //Pulling our hair out
+    //Owen and Sean <3
+    
     private Player _player;
 
     [SerializeField] private float _speedx;

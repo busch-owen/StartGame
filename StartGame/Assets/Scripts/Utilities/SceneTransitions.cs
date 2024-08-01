@@ -13,12 +13,13 @@ public class SceneTransitions : MonoBehaviour
     [SerializeField] private float fadeSpeed;
 
     private Leaderboard _leaderboard;
+    private TimesHandler _timesHandler;
 
-    [SerializeField] private UnityEvent gameEnded;
+    private UnityEvent _gameEnded;
     
     private void Start()
     {
-        gameEnded = new UnityEvent();
+        _gameEnded = new UnityEvent();
         _levelStatus = FindObjectOfType<LevelStatusHandler>();
         _transitionGroup = GetComponent<CanvasGroup>();
         _waitForFixed = new WaitForFixedUpdate();
@@ -47,11 +48,12 @@ public class SceneTransitions : MonoBehaviour
         }
 
         var nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-        if (nextScene > SceneManager.sceneCountInBuildSettings - 1)
+        if (nextScene >= SceneManager.sceneCountInBuildSettings)
         {
-            Debug.LogWarning("There are no more scenes in the build index after current scene");
-            gameEnded.Invoke();
-            SceneManager.LoadScene("LeaderboardTest");
+            _timesHandler = FindObjectOfType<TimesHandler>();
+            _gameEnded.AddListener(_timesHandler.CalculateTotalTimes);
+            _gameEnded.Invoke();
+            SceneManager.LoadScene(0);
             StopAllCoroutines();
             yield break;
         }
