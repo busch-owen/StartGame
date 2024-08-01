@@ -48,13 +48,13 @@ public class SceneTransitions : MonoBehaviour
         }
 
         var nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-        if (nextScene == SceneManager.sceneCountInBuildSettings)
+        if (nextScene >= SceneManager.sceneCountInBuildSettings)
         {
             _timesHandler = FindObjectOfType<TimesHandler>();
             _gameEnded.AddListener(_timesHandler.CalculateTotalTimes);
-            _gameEnded.Invoke();
             SceneManager.LoadScene(0);
             StopAllCoroutines();
+            _gameEnded.Invoke();
             yield break;
         }
         SceneManager.LoadScene(nextScene);
