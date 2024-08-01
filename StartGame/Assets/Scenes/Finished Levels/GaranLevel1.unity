@@ -1345,6 +1345,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: goalpost
       objectReference: {fileID: 0}
+    - target: {fileID: 4684964262823205089, guid: be13d1fee27bcba4cbb8ce8ec6deb878,
+        type: 3}
+      propertyPath: _audioManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3968483432867996891, guid: be13d1fee27bcba4cbb8ce8ec6deb878, type: 3}
