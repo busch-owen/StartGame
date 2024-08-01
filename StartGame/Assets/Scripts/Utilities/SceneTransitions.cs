@@ -52,9 +52,9 @@ public class SceneTransitions : MonoBehaviour
         {
             _timesHandler = FindObjectOfType<TimesHandler>();
             _gameEnded.AddListener(_timesHandler.CalculateTotalTimes);
+            _gameEnded.Invoke();
             SceneManager.LoadScene(0);
             StopAllCoroutines();
-            _gameEnded.Invoke();
             yield break;
         }
         SceneManager.LoadScene(nextScene);
