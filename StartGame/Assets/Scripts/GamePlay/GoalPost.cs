@@ -19,6 +19,8 @@ public class GoalPost : MonoBehaviour
 
     [SerializeField] private ParticleSystem confettiEffect;
 
+    [SerializeField] private AudioSource _winAudio;
+
     private void Awake()
     {
         _levelStatusHandler = FindObjectOfType<LevelStatusHandler>();
@@ -34,6 +36,7 @@ public class GoalPost : MonoBehaviour
         _cameraFollow.RemoveFollow();
         Physics.gravity = levelClearGravity;
         confettiEffect.Play();
+        _winAudio.Play();
         StartCoroutine(_levelStatusHandler.EndLevelSequence());
     }
 }
