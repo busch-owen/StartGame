@@ -9,6 +9,7 @@ public class LoginService : MonoBehaviour
     [SerializeField] private TMP_InputField signUpDisplayNameText;
     
     [SerializeField] private GameObject signUpScreen;
+    [SerializeField] private TMP_Text welcomeText;
 
     private LeaderboardLoader _loader;
     
@@ -18,12 +19,12 @@ public class LoginService : MonoBehaviour
         await UnityServices.InitializeAsync();
         if (!AuthenticationService.Instance.IsAuthorized)
         {
-            signUpScreen.SetActive(true);
             SignUpPlayer();
         }
         else
         {
             _loader.FillLeaderboard();
+            RefreshName();
         }
         _loader.gameObject.SetActive(false);
     }
@@ -34,6 +35,7 @@ public class LoginService : MonoBehaviour
         {
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
             _loader.FillLeaderboard();
+            RefreshName();
         }
         catch (Exception e)
         {
@@ -41,11 +43,34 @@ public class LoginService : MonoBehaviour
         }
     }
 
+    public async void RefreshName()
+    {
+        try
+        {
+            var newName = await AuthenticationService.Instance.GetPlayerNameAsync();
+            Debug.Log(newName);
+            welcomeText.text = "Welcome: " + newName + "!";
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
+    }
+    
     public async void UpdateUserDisplayName()
     {
-        var displayName = signUpDisplayNameText.text;
-        if (displayName.Length <= 0) return;
-        await AuthenticationService.Instance.UpdatePlayerNameAsync(displayName);
-        signUpScreen.SetActive(false);
+        try
+        {
+            var displayName = signUpDisplayNameText.text;
+            if (displayName.Length <= 0) return;
+            await AuthenticationService.Instance.UpdatePlayerNameAsync(displayName);
+            signUpScreen.SetActive(false);
+            RefreshName();
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
+        
     }
 }
